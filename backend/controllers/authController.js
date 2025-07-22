@@ -100,7 +100,7 @@ export const loginController = async(req, res) =>{
         //on the basis on id
         {_id:user._id},
         //secred key
-        process.env.JWT_secret,
+        process.env.JWT_SECRET,
 
         {
             expiresIn:"7d"
