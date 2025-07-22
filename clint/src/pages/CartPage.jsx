@@ -23,6 +23,7 @@ const CartPage = () => {
   };
 
   const checkoutPayment = async (amount) => {
+    console.log("entered pay");
     try {
       const {
         data: { key },
