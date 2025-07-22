@@ -27,7 +27,7 @@ const UserProfile = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        "http://localhost:8080/api/v1/auth/update-profile",
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/auth/update-profile",
         { name, email, password, phone, address }
       );
       if (data?.success) {
