@@ -16,7 +16,7 @@ const Users = () => {
   const getAllUsers = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/auth/get-users"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/auth/get-users"
       );
       setUser(data.allUsers);
       // setId(data.allUsers[0]._id);
@@ -31,7 +31,7 @@ const Users = () => {
     try {
       console.log("btn clicked and id id:", id);
       const { data } = await axios.delete(
-        `http://localhost:8080/api/v1/product/delete-user/${id}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/delete-user/${id}`
       );
 
       if (data?.success) {

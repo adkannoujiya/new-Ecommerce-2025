@@ -26,11 +26,16 @@ const CartPage = () => {
     try {
       const {
         data: { key },
-      } = await axios.get("http://localhost:8080/api/get-razorpay-key");
+      } = await axios.get(
+        "https://new-ecommerce-2025-1.onrender.com/api/get-razorpay-key"
+      );
 
       const {
         data: { order },
-      } = await axios.post("http://localhost:8080/api/checkout", { amount });
+      } = await axios.post(
+        "https://new-ecommerce-2025-1.onrender.com/api/checkout",
+        { amount }
+      );
 
       const options = {
         key,
@@ -45,7 +50,7 @@ const CartPage = () => {
             response;
 
           const res = await axios.post(
-            "http://localhost:8080/api/payment-verification",
+            "https://new-ecommerce-2025-1.onrender.com/api/payment-verification",
             {
               razorpay_order_id,
               razorpay_payment_id,
@@ -96,7 +101,7 @@ const CartPage = () => {
             cart.map((item) => (
               <div key={item._id} className={s.productCard}>
                 <img
-                  src={`http://localhost:8080/api/v1/product/product-photo/${item._id}`}
+                  src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${item._id}`}
                   alt={item.name}
                   className={s.productImage}
                 />

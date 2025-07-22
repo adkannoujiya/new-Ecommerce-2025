@@ -21,7 +21,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/single-product/${params.slug}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/single-product/${params.slug}`
       );
 
       if (data?.success) {
@@ -49,7 +49,7 @@ const UpdateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/get-category"
       );
 
       if (data?.success) {
@@ -79,7 +79,8 @@ const UpdateProduct = () => {
       // // FormData() it is convert the value in json (in string)  but we need shipping in boolean thats why we send it manually instead of formData()
 
       const { data } = await axios.put(
-        "http://localhost:8080/api/v1/product/update-product/" + id,
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/product/update-product/" +
+          id,
         productData,
         { shipping: shipping }
       );
@@ -100,7 +101,7 @@ const UpdateProduct = () => {
   const handledelete = async (e) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8080/api/v1/product/delete-product/${id}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/delete-product/${id}`
       );
 
       if (data?.success) {
@@ -161,7 +162,7 @@ const UpdateProduct = () => {
               ) : (
                 <div className="text-center">
                   <img
-                    src={`http://localhost:8080/api/v1/product/product-photo/${id}`}
+                    src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${id}`}
                     alt="product photo"
                     height={"200px"}
                     className="img img-responsive"

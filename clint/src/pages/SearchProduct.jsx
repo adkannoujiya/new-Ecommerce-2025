@@ -32,7 +32,7 @@ const SearchProduct = () => {
               <div key={p._id} className={`card m-2 ${s.searchpeoduct}`}>
                 <img
                   onClick={() => navigate(`/product-details/${p.slug}`)}
-                  src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                  src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                   style={{

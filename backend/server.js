@@ -25,7 +25,10 @@ const __dirname = path.dirname(__filename);
 //database confic
 connectDB();
 //middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://new-ecommerce-2025-1.onrender.com',
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));

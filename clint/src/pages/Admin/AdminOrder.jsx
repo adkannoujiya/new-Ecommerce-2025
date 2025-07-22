@@ -18,7 +18,9 @@ const AdminOrder = () => {
 
   const getOrder = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/all-orders");
+      const { data } = await axios.get(
+        "https://new-ecommerce-2025-1.onrender.com/api/all-orders"
+      );
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -31,9 +33,12 @@ const AdminOrder = () => {
 
   const handleChangeStatus = async (orderId, value) => {
     try {
-      await axios.put(`http://localhost:8080/api/update-status/${orderId}`, {
-        status: value,
-      });
+      await axios.put(
+        `https://new-ecommerce-2025-1.onrender.com/api/update-status/${orderId}`,
+        {
+          status: value,
+        }
+      );
       getOrder();
     } catch (e) {
       console.log(e);
@@ -84,7 +89,7 @@ const AdminOrder = () => {
                 {o?.product?.map((p) => (
                   <div key={p._id} className={s.productCard}>
                     <img
-                      src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                      src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                       alt={p.name}
                       className={s.productImg}
                     />

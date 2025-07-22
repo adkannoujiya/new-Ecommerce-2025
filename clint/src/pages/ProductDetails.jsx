@@ -19,7 +19,7 @@ const ProductDetails = () => {
     try {
       const { slug } = params;
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/single-product/${slug}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/single-product/${slug}`
       );
       if (data?.success) {
         setProduct(data?.singleProduct[0]);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
   const getSimilarproduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/related-product/${pid}/${cid}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/related-product/${pid}/${cid}`
       );
       if (data?.success) {
         setRelatedProduct(data?.product);
@@ -51,7 +51,7 @@ const ProductDetails = () => {
       <div className={s.productContainer}>
         <div className={s.productImageSection}>
           <img
-            src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+            src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${product._id}`}
             alt={product.name}
             className={s.productImage}
           />
@@ -88,7 +88,7 @@ const ProductDetails = () => {
             {relatedProduct.map((p) => (
               <div key={p._id} className={s.relatedCard}>
                 <img
-                  src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                  src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                   alt={p.name}
                   className={s.relatedImg}
                 />

@@ -39,7 +39,7 @@ const Home = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
 
@@ -55,7 +55,7 @@ const Home = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/product/product-filter",
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-filter",
         { checked, radio }
       );
 
@@ -78,7 +78,7 @@ const Home = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/product/product-count"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-count"
       );
       setLoading(false);
 
@@ -97,7 +97,7 @@ const Home = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
 
@@ -119,7 +119,7 @@ const Home = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/get-category"
       );
 
       if (data?.success) {
@@ -251,7 +251,7 @@ const Home = () => {
                       onClick={() => navigate(`/product-details/${p.slug}`)}
                     >
                       <img
-                        src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                        src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                         className={`card-img-top ${s.cardImage}`}
                         alt={p.name}
                       />

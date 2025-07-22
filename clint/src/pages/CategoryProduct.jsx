@@ -18,7 +18,7 @@ const CategoryProduct = () => {
   const getProductByCategory = async (req, res) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-category/${params.slug}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-category/${params.slug}`
       );
       if (data?.success) {
         console.log("check check ", data?.product);
@@ -39,7 +39,7 @@ const CategoryProduct = () => {
           {product.map((p) => (
             <div key={p._id} className="card m-2" style={{ width: "18rem" }}>
               <img
-                src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
               />

@@ -11,7 +11,8 @@ const UpdateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        "http://localhost:8080/api/v1/category/update-category/" + id,
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/update-category/" +
+          id,
         { name }
       );
 

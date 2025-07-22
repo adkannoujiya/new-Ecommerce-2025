@@ -16,7 +16,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/category/create-category",
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/create-category",
         { name }
       );
 
@@ -34,7 +34,8 @@ const CreateCategory = () => {
     try {
       const id = e;
       const { data } = await axios.delete(
-        "http://localhost:8080/api/v1/category/delete-category/" + id
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/delete-category/" +
+          id
       );
       if (data?.success) {
         alert("category deleted successfully");
@@ -51,7 +52,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/get-category"
       );
 
       if (data?.success) {

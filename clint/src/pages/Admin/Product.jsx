@@ -19,7 +19,7 @@ const Product = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
 
@@ -37,7 +37,7 @@ const Product = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/product/product-count"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-count"
       );
       setLoading(false);
 
@@ -56,7 +56,7 @@ const Product = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
 
@@ -92,7 +92,7 @@ const Product = () => {
                   style={{ width: "18rem" }}
                 >
                   <img
-                    src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                    src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />

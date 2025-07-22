@@ -18,7 +18,7 @@ const CreateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/category/get-category"
       );
 
       if (data?.success) {
@@ -48,7 +48,7 @@ const CreateProduct = () => {
       // // FormData() it is convert the value in json (in string)  but we need shipping in boolean thats why we send it manually instead of formData()
 
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/product//create-product",
+        "https://new-ecommerce-2025-1.onrender.com/api/v1/product//create-product",
         productData,
         { shipping: shipping }
       );
