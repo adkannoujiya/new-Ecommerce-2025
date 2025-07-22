@@ -1,0 +1,413 @@
+/* 
+
+
+.Logo{
+    height: 50px;
+    width: 200px;
+}
+
+
+
+
+
+
+.navbar {
+  background: linear-gradient(90deg, #ffffff, #fff3e0, #ffe0b2);
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(255, 165, 0, 0.2);
+  color: #333;
+}
+
+
+
+
+
+
+.customToggler {
+  border: none;
+  background-color: transparent;
+  padding: 6px 10px;
+  box-shadow: none;
+}
+
+.customToggler:hover,
+.customToggler:focus,
+.customToggler:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.HamIcon {
+  display: inline-block;
+  position: relative;
+  width: 28px;
+  height: 4px;
+  background-color: #222; 
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.HamIcon::before,
+.HamIcon::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  background-color: #222;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.HamIcon::before {
+  top: -10px;
+}
+
+.HamIcon::after {
+  top: 10px;
+}
+
+.customToggler.open .HamIcon {
+  background-color: transparent;
+}
+
+.customToggler.close{
+  background-color: white;
+}
+
+.customToggler.open .HamIcon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.customToggler.open .HamIcon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+
+
+@media (max-width: 600px) {
+
+
+.Logo{
+    height: 30px;
+    width: 120px;
+    margin-right: 100px;
+}
+
+.LogoContainer {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 10;
+}
+
+.Logo {
+  max-width: 130px;
+  height: auto;
+}
+} */
+
+.desktopNav{
+  width: 100%;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.searchGroup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.mobileNavsearch{
+  display: none;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #ffffff, #fff3e0, #ffe0b2);
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(255, 165, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
+ 
+}
+
+/* Desktop Layout */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  height: 50px;
+  width: 200px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: #ff6600;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 150px;
+  display: none;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: flex;
+}
+
+.dropdownMenu a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #222;
+}
+
+.dropdownMenu a:hover {
+  background-color: #ffe0b2;
+}
+
+/* Search Group */
+.searchGroup {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Nav */
+.mobileNav {
+  width: 100%;
+  display: none;
+  padding: 10px 14px;
+}
+
+.hamburger {
+  background: transparent;
+  border: none;
+}
+
+.HamIcon {
+  display: inline-block;
+  width: 28px;
+  height: 4px;
+  background-color: #222;
+  position: relative;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.HamIcon::before,
+.HamIcon::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  background-color: #222;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.HamIcon::before {
+  top: -10px;
+}
+.HamIcon::after {
+  top: 10px;
+}
+
+.HamIcon.open {
+  background-color: transparent;
+}
+.HamIcon.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.HamIcon.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.cartIcon {
+  font-size: 18px;
+  color: #222;
+}
+
+/* Sidebar */
+.sidebarOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #fff3e0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidebar a {
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.sidebar a:hover {
+  color: #ff6600;
+}
+
+.closeSidebar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  color: #333;
+}
+
+
+
+.saerchdiv{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+ 
+  
+}
+
+.cartdiv{
+  height: 20px;
+  width: 40px;
+  display: flex;
+  /* background-color: red; */
+}
+
+
+/* Responsive */
+@media (max-width: 1023px) {
+
+  .mobileNav {
+
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 14px;
+}
+
+  .mobileNavsearch{
+    display: none;
+  }
+
+  .searchGroup{
+    display: none;
+  }
+
+  .mobileNavsearch{
+  display: inline;
+}
+
+  .navfix{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+
+  .Logo {
+    margin-left: 25px;
+ 
+    height: 32px;
+    width: 120px;
+  }
+
+
+  .carticonmobile{
+    margin-bottom: 0px;
+    margin-right: 2px;
+  }
+
+  .cartdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,12 @@
+
+
+
+/* Smaller size for mobile */
+@media (max-width: 600px) {
+
+     .searchpeoduct {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1 5;
+  }
+}
