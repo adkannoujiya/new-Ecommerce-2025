@@ -329,12 +329,36 @@ const Navbar = () => {
             <NavLink to="/" onClick={closeSidebar}>
               Home
             </NavLink>
-            <NavLink to="/login" onClick={closeSidebar}>
-              Login
-            </NavLink>
-            <NavLink to="/register" onClick={closeSidebar}>
-              Register
-            </NavLink>
+
+
+
+
+              {!auth.user ? (
+            <>
+              <NavLink to="/register">Register</NavLink>
+              <NavLink to="/login">Login</NavLink>
+            </>
+          ) : (
+            <>
+              <div className={s.dropdown}>
+                <span>👤 {auth.user.name}</span>
+                <div className={s.dropdownMenu}>
+                  <NavLink
+                    to={`/dashboard${
+                      auth.user.role === 1 ? "/admin" : "/user"
+                    }`}
+                  >
+                    Dashboard
+                  </NavLink>
+                </div>
+              </div>
+              <NavLink onClick={handleLogout} to="/login">
+                Logout
+              </NavLink>
+            </>
+          )}
+            
+            
 
             <div className={s.dropdownMenu}>
               <NavLink
