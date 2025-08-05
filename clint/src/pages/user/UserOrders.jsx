@@ -11,7 +11,7 @@ const UserOrders = () => {
 
   const getOrder = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/orders");
+      const { data } = await axios.get("https://new-ecommerce-2025-1.onrender.com/api/orders");
       setOrders(data.order);
     } catch (error) {
       console.log(error);
@@ -59,7 +59,7 @@ const UserOrders = () => {
               <div key={p._id} className={`row mb-2 p-2 ${s.productCard}`}>
                 <div className="col-md-4">
                   <img
-                    src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                    src={`https://new-ecommerce-2025-1.onrender.com/api/v1/product/product-photo/${p._id}`}
                     alt={p.name}
                     className={`img-fluid ${s.productImage}`}
                   />
